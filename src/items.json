@@ -1,0 +1,2046 @@
+{
+  "120": [
+    {
+      "id": "N1",
+      "name": "Anxiety",
+      "items": [
+        {
+          "text": "Worry about things.",
+          "reverse": false
+        },
+        {
+          "text": "Fear for the worst.",
+          "reverse": false
+        },
+        {
+          "text": "Am afraid of many things.",
+          "reverse": false
+        },
+        {
+          "text": "Get stressed out easily.",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "N2",
+      "name": "Anger",
+      "items": [
+        {
+          "text": "Get angry easily.",
+          "reverse": false
+        },
+        {
+          "text": "Get irritated easily.",
+          "reverse": false
+        },
+        {
+          "text": "Lose my temper.",
+          "reverse": false
+        },
+        {
+          "text": "Am not easily annoyed.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "N3",
+      "name": "Depression",
+      "items": [
+        {
+          "text": "Often feel blue.",
+          "reverse": false
+        },
+        {
+          "text": "Dislike myself.",
+          "reverse": false
+        },
+        {
+          "text": "Am often down in the dumps.",
+          "reverse": false
+        },
+        {
+          "text": "Feel comfortable with myself.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "N4",
+      "name": "Self-Consciousness",
+      "items": [
+        {
+          "text": "Find it difficult to approach others.",
+          "reverse": false
+        },
+        {
+          "text": "Am afraid to draw attention to myself.",
+          "reverse": false
+        },
+        {
+          "text": "Only feel comfortable with friends.",
+          "reverse": false
+        },
+        {
+          "text": "Am not bothered by difficult social situations.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "N5",
+      "name": "Immoderation",
+      "items": [
+        {
+          "text": "Go on binges.",
+          "reverse": false
+        },
+        {
+          "text": "Rarely overindulge.",
+          "reverse": true
+        },
+        {
+          "text": "Easily resist temptations.",
+          "reverse": true
+        },
+        {
+          "text": "Am able to control my cravings.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "N6",
+      "name": "Vulnerability",
+      "items": [
+        {
+          "text": "Panic easily.",
+          "reverse": false
+        },
+        {
+          "text": "Become overwhelmed by events.",
+          "reverse": false
+        },
+        {
+          "text": "Feel that I'm unable to deal with things.",
+          "reverse": false
+        },
+        {
+          "text": "Remain calm under pressure.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "name": "Friendliness",
+      "items": [
+        {
+          "text": "Make friends easily.",
+          "reverse": false
+        },
+        {
+          "text": "Feel comfortable around people.",
+          "reverse": false
+        },
+        {
+          "text": "Avoid contacts with others.",
+          "reverse": true
+        },
+        {
+          "text": "Keep others at a distance.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "E2",
+      "name": "Gregariousness",
+      "items": [
+        {
+          "text": "Love large parties.",
+          "reverse": false
+        },
+        {
+          "text": "Talk to a lot of different people at parties.",
+          "reverse": false
+        },
+        {
+          "text": "Prefer to be alone.",
+          "reverse": true
+        },
+        {
+          "text": "Avoid crowds.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "E3",
+      "name": "Assertiveness",
+      "items": [
+        {
+          "text": "Take charge.",
+          "reverse": false
+        },
+        {
+          "text": "Try to lead others.",
+          "reverse": false
+        },
+        {
+          "text": "Take control of things.",
+          "reverse": false
+        },
+        {
+          "text": "Wait for others to lead the way.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "E4",
+      "name": "Activity Level",
+      "items": [
+        {
+          "text": "Am always busy.",
+          "reverse": false
+        },
+        {
+          "text": "Am always on the go.",
+          "reverse": false
+        },
+        {
+          "text": "Do a lot in my spare time.",
+          "reverse": false
+        },
+        {
+          "text": "Like to take it easy.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "E5",
+      "name": "Excitement-Seeking",
+      "items": [
+        {
+          "text": "Love excitement.",
+          "reverse": false
+        },
+        {
+          "text": "Seek adventure.",
+          "reverse": false
+        },
+        {
+          "text": "Enjoy being reckless.",
+          "reverse": false
+        },
+        {
+          "text": "Act wild and crazy.",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "E6",
+      "name": "Cheerfulness",
+      "items": [
+        {
+          "text": "Radiate joy.",
+          "reverse": false
+        },
+        {
+          "text": "Have a lot of fun.",
+          "reverse": false
+        },
+        {
+          "text": "Love life.",
+          "reverse": false
+        },
+        {
+          "text": "Look at the bright side of life.",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "O1",
+      "name": "Imagination",
+      "items": [
+        {
+          "text": "Have a vivid imagination.",
+          "reverse": false
+        },
+        {
+          "text": "Enjoy wild flights of fantasy.",
+          "reverse": false
+        },
+        {
+          "text": "Love to daydream.",
+          "reverse": false
+        },
+        {
+          "text": "Like to get lost in thought.",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "O2",
+      "name": "Artistic Interests",
+      "items": [
+        {
+          "text": "Believe in the importance of art.",
+          "reverse": false
+        },
+        {
+          "text": "See beauty in things that others might not notice.",
+          "reverse": false
+        },
+        {
+          "text": "Do not like poetry.",
+          "reverse": true
+        },
+        {
+          "text": "Do not enjoy going to art museums.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "O3",
+      "name": "Emotionality",
+      "items": [
+        {
+          "text": "Experience my emotions intensely.",
+          "reverse": false
+        },
+        {
+          "text": "Feel others' emotions.",
+          "reverse": false
+        },
+        {
+          "text": "Rarely notice my emotional reactions.",
+          "reverse": true
+        },
+        {
+          "text": "Don't understand people who get emotional.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "O4",
+      "name": "Adventurousness",
+      "items": [
+        {
+          "text": "Prefer variety to routine.",
+          "reverse": false
+        },
+        {
+          "text": "Prefer to stick with things that I know.",
+          "reverse": true
+        },
+        {
+          "text": "Dislike changes.",
+          "reverse": true
+        },
+        {
+          "text": "Am attached to conventional ways.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "O5",
+      "name": "Intellect",
+      "items": [
+        {
+          "text": "Love to read challenging material.",
+          "reverse": false
+        },
+        {
+          "text": "Avoid philosophical discussions.",
+          "reverse": true
+        },
+        {
+          "text": "Have difficulty understanding abstract ideas.",
+          "reverse": true
+        },
+        {
+          "text": "Am not interested in theoretical discussions.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "O6",
+      "name": "Liberalism",
+      "items": [
+        {
+          "text": "Tend to vote for liberal political candidates.",
+          "reverse": false
+        },
+        {
+          "text": "Believe that there is no absolute right and wrong.",
+          "reverse": false
+        },
+        {
+          "text": "Tend to vote for conservative political candidates.",
+          "reverse": true
+        },
+        {
+          "text": "Believe that we should be tough on crime.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "name": "Trust",
+      "items": [
+        {
+          "text": "Trust others.",
+          "reverse": false
+        },
+        {
+          "text": "Believe that others have good intentions.",
+          "reverse": false
+        },
+        {
+          "text": "Trust what people say.",
+          "reverse": false
+        },
+        {
+          "text": "Distrust people.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "A2",
+      "name": "Morality",
+      "items": [
+        {
+          "text": "Use others for my own ends.",
+          "reverse": true
+        },
+        {
+          "text": "Cheat to get ahead.",
+          "reverse": true
+        },
+        {
+          "text": "Take advantage of others.",
+          "reverse": true
+        },
+        {
+          "text": "Obstruct others' plans.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "A3",
+      "name": "Altruism",
+      "items": [
+        {
+          "text": "Am concerned about others.",
+          "reverse": false
+        },
+        {
+          "text": "Love to help others.",
+          "reverse": false
+        },
+        {
+          "text": "Am indifferent to the feelings of others.",
+          "reverse": true
+        },
+        {
+          "text": "Take no time for others.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "A4",
+      "name": "Cooperation",
+      "items": [
+        {
+          "text": "Love a good fight.",
+          "reverse": true
+        },
+        {
+          "text": "Yell at people.",
+          "reverse": true
+        },
+        {
+          "text": "Insult people.",
+          "reverse": true
+        },
+        {
+          "text": "Get back at others.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "A5",
+      "name": "Modesty",
+      "items": [
+        {
+          "text": "Believe that I am better than others.",
+          "reverse": true
+        },
+        {
+          "text": "Think highly of myself.",
+          "reverse": true
+        },
+        {
+          "text": "Have a high opinion of myself.",
+          "reverse": true
+        },
+        {
+          "text": "Boast about my virtues.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "A6",
+      "name": "Sympathy",
+      "items": [
+        {
+          "text": "Sympathize with the homeless.",
+          "reverse": false
+        },
+        {
+          "text": "Feel sympathy for those who are worse off than myself.",
+          "reverse": false
+        },
+        {
+          "text": "Am not interested in other people's problems.",
+          "reverse": true
+        },
+        {
+          "text": "Try not to think about the needy.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "C1",
+      "name": "Self-Efficacy",
+      "items": [
+        {
+          "text": "Complete tasks successfully.",
+          "reverse": false
+        },
+        {
+          "text": "Excel in what I do.",
+          "reverse": false
+        },
+        {
+          "text": "Handle tasks smoothly.",
+          "reverse": false
+        },
+        {
+          "text": "Know how to get things done.",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "name": "Orderliness",
+      "items": [
+        {
+          "text": "Like to tidy up.",
+          "reverse": false
+        },
+        {
+          "text": "Often forget to put things back in their proper place.",
+          "reverse": true
+        },
+        {
+          "text": "Leave a mess in my room.",
+          "reverse": true
+        },
+        {
+          "text": "Leave my belongings around.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "name": "Dutifulness",
+      "items": [
+        {
+          "text": "Keep my promises.",
+          "reverse": false
+        },
+        {
+          "text": "Tell the truth.",
+          "reverse": false
+        },
+        {
+          "text": "Break rules.",
+          "reverse": true
+        },
+        {
+          "text": "Break my promises.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "name": "Achievement-Striving",
+      "items": [
+        {
+          "text": "Do more than what's expected of me.",
+          "reverse": false
+        },
+        {
+          "text": "Work hard.",
+          "reverse": false
+        },
+        {
+          "text": "Put little time and effort into my work.",
+          "reverse": true
+        },
+        {
+          "text": "Do just enough work to get by.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "name": "Self-Discipline",
+      "items": [
+        {
+          "text": "Am always prepared.",
+          "reverse": false
+        },
+        {
+          "text": "Carry out my plans.",
+          "reverse": false
+        },
+        {
+          "text": "Waste my time.",
+          "reverse": true
+        },
+        {
+          "text": "Have difficulty starting tasks.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "name": "Cautiousness",
+      "items": [
+        {
+          "text": "Jump into things without thinking.",
+          "reverse": true
+        },
+        {
+          "text": "Make rash decisions.",
+          "reverse": true
+        },
+        {
+          "text": "Rush into things.",
+          "reverse": true
+        },
+        {
+          "text": "Act without thinking.",
+          "reverse": true
+        }
+      ]
+    }
+  ],
+  "300": [
+    {
+      "id": "N1",
+      "name": "Anxiety",
+      "items": [
+        {
+          "text": "Worry about things.",
+          "reverse": false
+        },
+        {
+          "text": "Fear for the worst.",
+          "reverse": false
+        },
+        {
+          "text": "Am afraid of many things.",
+          "reverse": false
+        },
+        {
+          "text": "Get stressed out easily.",
+          "reverse": false
+        },
+        {
+          "text": "Get caught up in my problems.",
+          "reverse": false
+        },
+        {
+          "text": "Am not easily bothered by things.",
+          "reverse": true
+        },
+        {
+          "text": "Am relaxed most of the time.",
+          "reverse": true
+        },
+        {
+          "text": "Am not easily disturbed by events.",
+          "reverse": true
+        },
+        {
+          "text": "Don't worry about things that have already happened.",
+          "reverse": true
+        },
+        {
+          "text": "Adapt easily to new situations.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "N2",
+      "name": "Anger",
+      "items": [
+        {
+          "text": "Get angry easily.",
+          "reverse": false
+        },
+        {
+          "text": "Get irritated easily.",
+          "reverse": false
+        },
+        {
+          "text": "Get upset easily.",
+          "reverse": false
+        },
+        {
+          "text": "Am often in a bad mood.",
+          "reverse": false
+        },
+        {
+          "text": "Lose my temper.",
+          "reverse": false
+        },
+        {
+          "text": "Rarely get irritated.",
+          "reverse": true
+        },
+        {
+          "text": "Seldom get mad.",
+          "reverse": true
+        },
+        {
+          "text": "Am not easily annoyed.",
+          "reverse": true
+        },
+        {
+          "text": "Keep my cool.",
+          "reverse": true
+        },
+        {
+          "text": "Rarely complain.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "N3",
+      "name": "Depression",
+      "items": [
+        {
+          "text": "Often feel blue.",
+          "reverse": false
+        },
+        {
+          "text": "Dislike myself.",
+          "reverse": false
+        },
+        {
+          "text": "Am often down in the dumps.",
+          "reverse": false
+        },
+        {
+          "text": "Have a low opinion of myself.",
+          "reverse": false
+        },
+        {
+          "text": "Have frequent mood swings.",
+          "reverse": false
+        },
+        {
+          "text": "Feel desperate.",
+          "reverse": false
+        },
+        {
+          "text": "Feel that my life lacks direction.",
+          "reverse": false
+        },
+        {
+          "text": "Seldom feel blue.",
+          "reverse": true
+        },
+        {
+          "text": "Feel comfortable with myself.",
+          "reverse": true
+        },
+        {
+          "text": "Am very pleased with myself.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "N4",
+      "name": "Self-Consciousness",
+      "items": [
+        {
+          "text": "Am easily intimidated.",
+          "reverse": false
+        },
+        {
+          "text": "Am afraid that I will do the wrong thing.",
+          "reverse": false
+        },
+        {
+          "text": "Find it difficult to approach others.",
+          "reverse": false
+        },
+        {
+          "text": "Am afraid to draw attention to myself.",
+          "reverse": false
+        },
+        {
+          "text": "Only feel comfortable with friends.",
+          "reverse": false
+        },
+        {
+          "text": "Stumble over my words.",
+          "reverse": false
+        },
+        {
+          "text": "Am not embarrassed easily.",
+          "reverse": true
+        },
+        {
+          "text": "Am comfortable in unfamiliar situations.",
+          "reverse": true
+        },
+        {
+          "text": "Am not bothered by difficult social situations.",
+          "reverse": true
+        },
+        {
+          "text": "Am able to stand up for myself.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "N5",
+      "name": "Immoderation",
+      "items": [
+        {
+          "text": "Often eat too much.",
+          "reverse": false
+        },
+        {
+          "text": "Don't know why I do some of the things I do.",
+          "reverse": false
+        },
+        {
+          "text": "Do things I later regret.",
+          "reverse": false
+        },
+        {
+          "text": "Go on binges.",
+          "reverse": false
+        },
+        {
+          "text": "Love to eat.",
+          "reverse": false
+        },
+        {
+          "text": "Rarely overindulge.",
+          "reverse": true
+        },
+        {
+          "text": "Easily resist temptations.",
+          "reverse": true
+        },
+        {
+          "text": "Am able to control my cravings.",
+          "reverse": true
+        },
+        {
+          "text": "Never spend more than I can afford.",
+          "reverse": true
+        },
+        {
+          "text": "Never splurge.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "N6",
+      "name": "Vulnerability",
+      "items": [
+        {
+          "text": "Panic easily.",
+          "reverse": false
+        },
+        {
+          "text": "Become overwhelmed by events.",
+          "reverse": false
+        },
+        {
+          "text": "Feel that I'm unable to deal with things.",
+          "reverse": false
+        },
+        {
+          "text": "Can't make up my mind.",
+          "reverse": false
+        },
+        {
+          "text": "Get overwhelmed by emotions.",
+          "reverse": false
+        },
+        {
+          "text": "Remain calm under pressure.",
+          "reverse": true
+        },
+        {
+          "text": "Can handle complex problems.",
+          "reverse": true
+        },
+        {
+          "text": "Know how to cope.",
+          "reverse": true
+        },
+        {
+          "text": "Readily overcome setbacks.",
+          "reverse": true
+        },
+        {
+          "text": "Am calm even in tense situations.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "name": "Friendliness",
+      "items": [
+        {
+          "text": "Make friends easily.",
+          "reverse": false
+        },
+        {
+          "text": "Warm up quickly to others.",
+          "reverse": false
+        },
+        {
+          "text": "Feel comfortable around people.",
+          "reverse": false
+        },
+        {
+          "text": "Act comfortably with others.",
+          "reverse": false
+        },
+        {
+          "text": "Cheer people up.",
+          "reverse": false
+        },
+        {
+          "text": "Am hard to get to know.",
+          "reverse": true
+        },
+        {
+          "text": "Often feel uncomfortable around others.",
+          "reverse": true
+        },
+        {
+          "text": "Avoid contacts with others.",
+          "reverse": true
+        },
+        {
+          "text": "Am not really interested in others.",
+          "reverse": true
+        },
+        {
+          "text": "Keep others at a distance.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "E2",
+      "name": "Gregariousness",
+      "items": [
+        {
+          "text": "Love large parties.",
+          "reverse": false
+        },
+        {
+          "text": "Talk to a lot of different people at parties.",
+          "reverse": false
+        },
+        {
+          "text": "Enjoy being part of a group.",
+          "reverse": false
+        },
+        {
+          "text": "Involve others in what I am doing.",
+          "reverse": false
+        },
+        {
+          "text": "Love surprise parties.",
+          "reverse": false
+        },
+        {
+          "text": "Prefer to be alone.",
+          "reverse": true
+        },
+        {
+          "text": "Want to be left alone.",
+          "reverse": true
+        },
+        {
+          "text": "Don't like crowded events.",
+          "reverse": true
+        },
+        {
+          "text": "Avoid crowds.",
+          "reverse": true
+        },
+        {
+          "text": "Seek quiet.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "E3",
+      "name": "Assertiveness",
+      "items": [
+        {
+          "text": "Take charge.",
+          "reverse": false
+        },
+        {
+          "text": "Try to lead others.",
+          "reverse": false
+        },
+        {
+          "text": "Can talk others into doing things.",
+          "reverse": false
+        },
+        {
+          "text": "Seek to influence others.",
+          "reverse": false
+        },
+        {
+          "text": "Take control of things.",
+          "reverse": false
+        },
+        {
+          "text": "Wait for others to lead the way.",
+          "reverse": true
+        },
+        {
+          "text": "Keep in the background.",
+          "reverse": true
+        },
+        {
+          "text": "Have little to say.",
+          "reverse": true
+        },
+        {
+          "text": "Don't like to draw attention to myself.",
+          "reverse": true
+        },
+        {
+          "text": "Hold back my opinions.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "E4",
+      "name": "Activity Level",
+      "items": [
+        {
+          "text": "Am always busy.",
+          "reverse": false
+        },
+        {
+          "text": "Am always on the go.",
+          "reverse": false
+        },
+        {
+          "text": "Do a lot in my spare time.",
+          "reverse": false
+        },
+        {
+          "text": "Can manage many things at the same time.",
+          "reverse": false
+        },
+        {
+          "text": "React quickly.",
+          "reverse": false
+        },
+        {
+          "text": "Like to take it easy.",
+          "reverse": true
+        },
+        {
+          "text": "Like to take my time.",
+          "reverse": true
+        },
+        {
+          "text": "Like a leisurely lifestyle.",
+          "reverse": true
+        },
+        {
+          "text": "Let things proceed at their own pace.",
+          "reverse": true
+        },
+        {
+          "text": "React slowly.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "E5",
+      "name": "Excitement-Seeking",
+      "items": [
+        {
+          "text": "Love excitement.",
+          "reverse": false
+        },
+        {
+          "text": "Seek adventure.",
+          "reverse": false
+        },
+        {
+          "text": "Love action.",
+          "reverse": false
+        },
+        {
+          "text": "Enjoy being part of a loud crowd.",
+          "reverse": false
+        },
+        {
+          "text": "Enjoy being reckless.",
+          "reverse": false
+        },
+        {
+          "text": "Act wild and crazy.",
+          "reverse": false
+        },
+        {
+          "text": "Willing to try anything once.",
+          "reverse": false
+        },
+        {
+          "text": "Seek danger.",
+          "reverse": false
+        },
+        {
+          "text": "Would never go hang gliding or bungee jumping.",
+          "reverse": true
+        },
+        {
+          "text": "Dislike loud music.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "E6",
+      "name": "Cheerfulness",
+      "items": [
+        {
+          "text": "Radiate joy.",
+          "reverse": false
+        },
+        {
+          "text": "Have a lot of fun.",
+          "reverse": false
+        },
+        {
+          "text": "Express childlike joy.",
+          "reverse": false
+        },
+        {
+          "text": "Laugh my way through life.",
+          "reverse": false
+        },
+        {
+          "text": "Love life.",
+          "reverse": false
+        },
+        {
+          "text": "Look at the bright side of life.",
+          "reverse": false
+        },
+        {
+          "text": "Laugh aloud.",
+          "reverse": false
+        },
+        {
+          "text": "Amuse my friends.",
+          "reverse": false
+        },
+        {
+          "text": "Am not easily amused.",
+          "reverse": true
+        },
+        {
+          "text": "Seldom joke around.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "O1",
+      "name": "Imagination",
+      "items": [
+        {
+          "text": "Have a vivid imagination.",
+          "reverse": false
+        },
+        {
+          "text": "Enjoy wild flights of fantasy.",
+          "reverse": false
+        },
+        {
+          "text": "Love to daydream.",
+          "reverse": false
+        },
+        {
+          "text": "Like to get lost in thought.",
+          "reverse": false
+        },
+        {
+          "text": "Indulge in my fantasies.",
+          "reverse": false
+        },
+        {
+          "text": "Spend time reflecting on things.",
+          "reverse": false
+        },
+        {
+          "text": "Seldom daydream.",
+          "reverse": true
+        },
+        {
+          "text": "Do not have a good imagination.",
+          "reverse": true
+        },
+        {
+          "text": "Seldom get lost in thought.",
+          "reverse": true
+        },
+        {
+          "text": "Have difficulty imagining things.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "O2",
+      "name": "Artistic Interests",
+      "items": [
+        {
+          "text": "Believe in the importance of art.",
+          "reverse": false
+        },
+        {
+          "text": "Like music.",
+          "reverse": false
+        },
+        {
+          "text": "See beauty in things that others might not notice.",
+          "reverse": false
+        },
+        {
+          "text": "Love flowers.",
+          "reverse": false
+        },
+        {
+          "text": "Enjoy the beauty of nature.",
+          "reverse": false
+        },
+        {
+          "text": "Do not like art.",
+          "reverse": true
+        },
+        {
+          "text": "Do not like poetry.",
+          "reverse": true
+        },
+        {
+          "text": "Do not enjoy going to art museums.",
+          "reverse": true
+        },
+        {
+          "text": "Do not like concerts.",
+          "reverse": true
+        },
+        {
+          "text": "Do not enjoy watching dance performances.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "O3",
+      "name": "Emotionality",
+      "items": [
+        {
+          "text": "Experience my emotions intensely.",
+          "reverse": false
+        },
+        {
+          "text": "Feel others' emotions.",
+          "reverse": false
+        },
+        {
+          "text": "Am passionate about causes.",
+          "reverse": false
+        },
+        {
+          "text": "Enjoy examining myself and my life.",
+          "reverse": false
+        },
+        {
+          "text": "Try to understand myself.",
+          "reverse": false
+        },
+        {
+          "text": "Seldom get emotional.",
+          "reverse": true
+        },
+        {
+          "text": "Am not easily affected by my emotions.",
+          "reverse": true
+        },
+        {
+          "text": "Rarely notice my emotional reactions.",
+          "reverse": true
+        },
+        {
+          "text": "Experience very few emotional highs and lows.",
+          "reverse": true
+        },
+        {
+          "text": "Don't understand people who get emotional.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "O4",
+      "name": "Adventurousness",
+      "items": [
+        {
+          "text": "Prefer variety to routine.",
+          "reverse": false
+        },
+        {
+          "text": "Like to visit new places.",
+          "reverse": false
+        },
+        {
+          "text": "Interested in many things.",
+          "reverse": false
+        },
+        {
+          "text": "Like to begin new things.",
+          "reverse": false
+        },
+        {
+          "text": "Prefer to stick with things that I know.",
+          "reverse": true
+        },
+        {
+          "text": "Dislike changes.",
+          "reverse": true
+        },
+        {
+          "text": "Don't like the idea of change.",
+          "reverse": true
+        },
+        {
+          "text": "Am a creature of habit.",
+          "reverse": true
+        },
+        {
+          "text": "Dislike new foods.",
+          "reverse": true
+        },
+        {
+          "text": "Am attached to conventional ways.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "O5",
+      "name": "Intellect",
+      "items": [
+        {
+          "text": "Like to solve complex problems.",
+          "reverse": false
+        },
+        {
+          "text": "Love to read challenging material.",
+          "reverse": false
+        },
+        {
+          "text": "Have a rich vocabulary.",
+          "reverse": false
+        },
+        {
+          "text": "Can handle a lot of information.",
+          "reverse": false
+        },
+        {
+          "text": "Enjoy thinking about things.",
+          "reverse": false
+        },
+        {
+          "text": "Am not interested in abstract ideas.",
+          "reverse": true
+        },
+        {
+          "text": "Avoid philosophical discussions.",
+          "reverse": true
+        },
+        {
+          "text": "Have difficulty understanding abstract ideas.",
+          "reverse": true
+        },
+        {
+          "text": "Am not interested in theoretical discussions.",
+          "reverse": true
+        },
+        {
+          "text": "Avoid difficult reading material.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "O6",
+      "name": "Liberalism",
+      "items": [
+        {
+          "text": "Tend to vote for liberal political candidates.",
+          "reverse": false
+        },
+        {
+          "text": "Believe that there is no absolute right or wrong.",
+          "reverse": false
+        },
+        {
+          "text": "Believe that criminals should receive help rather than \n            punishment.",
+          "reverse": false
+        },
+        {
+          "text": "Believe in one true religion.",
+          "reverse": true
+        },
+        {
+          "text": "Tend to vote for conservative political candidates.",
+          "reverse": true
+        },
+        {
+          "text": "Believe that too much tax money goes to support artists.",
+          "reverse": true
+        },
+        {
+          "text": "Believe laws should be strictly enforced.",
+          "reverse": true
+        },
+        {
+          "text": "Believe that we coddle criminals too much.",
+          "reverse": true
+        },
+        {
+          "text": "Believe that we should be tough on crime.",
+          "reverse": true
+        },
+        {
+          "text": "Like to stand during the national anthem.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "name": "Trust",
+      "items": [
+        {
+          "text": "Trust others.",
+          "reverse": false
+        },
+        {
+          "text": "Believe that others have good intentions.",
+          "reverse": false
+        },
+        {
+          "text": "Trust what people say.",
+          "reverse": false
+        },
+        {
+          "text": "Believe that people are basically moral.",
+          "reverse": false
+        },
+        {
+          "text": "Believe in human goodness.",
+          "reverse": false
+        },
+        {
+          "text": "Think that all will be well.",
+          "reverse": false
+        },
+        {
+          "text": "Distrust people.",
+          "reverse": true
+        },
+        {
+          "text": "Suspect hidden motives in others.",
+          "reverse": true
+        },
+        {
+          "text": "Am wary of others.",
+          "reverse": true
+        },
+        {
+          "text": "Believe that people are essentially evil.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "A2",
+      "name": "Morality",
+      "items": [
+        {
+          "text": "Would never cheat on my taxes.",
+          "reverse": false
+        },
+        {
+          "text": "Stick to the rules.",
+          "reverse": false
+        },
+        {
+          "text": "Use flattery to get ahead.",
+          "reverse": true
+        },
+        {
+          "text": "Use others for my own ends.",
+          "reverse": true
+        },
+        {
+          "text": "Know how to get around the rules.",
+          "reverse": true
+        },
+        {
+          "text": "Cheat to get ahead.",
+          "reverse": true
+        },
+        {
+          "text": "Put people under pressure.",
+          "reverse": true
+        },
+        {
+          "text": "Pretend to be concerned for others.",
+          "reverse": true
+        },
+        {
+          "text": "Take advantage of others.",
+          "reverse": true
+        },
+        {
+          "text": "Obstruct others' plans.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "A3",
+      "name": "Altruism",
+      "items": [
+        {
+          "text": "Make people feel welcome.",
+          "reverse": false
+        },
+        {
+          "text": "Anticipate the needs of others.",
+          "reverse": false
+        },
+        {
+          "text": "Love to help others.",
+          "reverse": false
+        },
+        {
+          "text": "Am concerned about others.",
+          "reverse": false
+        },
+        {
+          "text": "Have a good word for everyone.",
+          "reverse": false
+        },
+        {
+          "text": "Look down on others.",
+          "reverse": true
+        },
+        {
+          "text": "Am indifferent to the feelings of others.",
+          "reverse": true
+        },
+        {
+          "text": "Make people feel uncomfortable.",
+          "reverse": true
+        },
+        {
+          "text": "Turn my back on others.",
+          "reverse": true
+        },
+        {
+          "text": "Take no time for others.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "A4",
+      "name": "Cooperation",
+      "items": [
+        {
+          "text": "Am easy to satisfy.",
+          "reverse": false
+        },
+        {
+          "text": "Can't stand confrontations.",
+          "reverse": false
+        },
+        {
+          "text": "Hate to seem pushy.",
+          "reverse": false
+        },
+        {
+          "text": "Have a sharp tongue.",
+          "reverse": true
+        },
+        {
+          "text": "Contradict others.",
+          "reverse": true
+        },
+        {
+          "text": "Love a good fight.",
+          "reverse": true
+        },
+        {
+          "text": "Yell at people.",
+          "reverse": true
+        },
+        {
+          "text": "Insult people.",
+          "reverse": true
+        },
+        {
+          "text": "Get back at others.",
+          "reverse": true
+        },
+        {
+          "text": "Hold a grudge.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "A5",
+      "name": "Modesty",
+      "items": [
+        {
+          "text": "Dislike being the center of attention.",
+          "reverse": false
+        },
+        {
+          "text": "Dislike talking about myself.",
+          "reverse": false
+        },
+        {
+          "text": "Consider myself an average person.",
+          "reverse": false
+        },
+        {
+          "text": "Seldom toot my own horn.",
+          "reverse": false
+        },
+        {
+          "text": "Believe that I am better than others.",
+          "reverse": true
+        },
+        {
+          "text": "Think highly of myself.",
+          "reverse": true
+        },
+        {
+          "text": "Have a high opinion of myself.",
+          "reverse": true
+        },
+        {
+          "text": "Know the answers to many questions.",
+          "reverse": true
+        },
+        {
+          "text": "Boast about my virtues.",
+          "reverse": true
+        },
+        {
+          "text": "Make myself the center of attention.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "A6",
+      "name": "Sympathy",
+      "items": [
+        {
+          "text": "Sympathize with the homeless.",
+          "reverse": false
+        },
+        {
+          "text": "Feel sympathy for those who are worse off than myself.",
+          "reverse": false
+        },
+        {
+          "text": "Value cooperation over competition.",
+          "reverse": false
+        },
+        {
+          "text": "Suffer from others' sorrows.",
+          "reverse": false
+        },
+        {
+          "text": "Am not interested in other people's problems.",
+          "reverse": true
+        },
+        {
+          "text": "Tend to dislike soft-hearted people.",
+          "reverse": true
+        },
+        {
+          "text": "Believe in an eye for an eye.",
+          "reverse": true
+        },
+        {
+          "text": "Try not to think about the needy.",
+          "reverse": true
+        },
+        {
+          "text": "Believe people should fend for themselves.",
+          "reverse": true
+        },
+        {
+          "text": "Can't stand weak people.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "C1",
+      "name": "Self-Efficacy",
+      "items": [
+        {
+          "text": "Complete tasks successfully.",
+          "reverse": false
+        },
+        {
+          "text": "Excel in what I do.",
+          "reverse": false
+        },
+        {
+          "text": "Handle tasks smoothly.",
+          "reverse": false
+        },
+        {
+          "text": "Am sure of my ground.",
+          "reverse": false
+        },
+        {
+          "text": "Come up with good solutions.",
+          "reverse": false
+        },
+        {
+          "text": "Know how to get things done.",
+          "reverse": false
+        },
+        {
+          "text": "Misjudge situations.",
+          "reverse": true
+        },
+        {
+          "text": "Don't understand things.",
+          "reverse": true
+        },
+        {
+          "text": "Have little to contribute.",
+          "reverse": true
+        },
+        {
+          "text": "Don't see the consequences of things.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "name": "Orderliness",
+      "items": [
+        {
+          "text": "Like order.",
+          "reverse": false
+        },
+        {
+          "text": "Like to tidy up.",
+          "reverse": false
+        },
+        {
+          "text": "Want everything to be \"just right.\"",
+          "reverse": false
+        },
+        {
+          "text": "Love order and regularity.",
+          "reverse": false
+        },
+        {
+          "text": "Do things according to a plan.",
+          "reverse": false
+        },
+        {
+          "text": "Often forget to put things back in their proper place.",
+          "reverse": true
+        },
+        {
+          "text": "Leave a mess in my room.",
+          "reverse": true
+        },
+        {
+          "text": "Leave my belongings around.",
+          "reverse": true
+        },
+        {
+          "text": "Am not bothered by messy people.",
+          "reverse": true
+        },
+        {
+          "text": "Am not bothered by disorder.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "name": "Dutifulness",
+      "items": [
+        {
+          "text": "Try to follow the rules.",
+          "reverse": false
+        },
+        {
+          "text": "Keep my promises.",
+          "reverse": false
+        },
+        {
+          "text": "Pay my bills on time.",
+          "reverse": false
+        },
+        {
+          "text": "Tell the truth.",
+          "reverse": false
+        },
+        {
+          "text": "Listen to my conscience.",
+          "reverse": false
+        },
+        {
+          "text": "Break rules.",
+          "reverse": true
+        },
+        {
+          "text": "Break my promises.",
+          "reverse": true
+        },
+        {
+          "text": "Get others to do my duties.",
+          "reverse": true
+        },
+        {
+          "text": "Do the opposite of what is asked.",
+          "reverse": true
+        },
+        {
+          "text": "Misrepresent the facts.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "name": "Achievement-Striving",
+      "items": [
+        {
+          "text": "Go straight for the goal.",
+          "reverse": false
+        },
+        {
+          "text": "Work hard.",
+          "reverse": false
+        },
+        {
+          "text": "Turn plans into actions.",
+          "reverse": false
+        },
+        {
+          "text": "Plunge into tasks with all my heart.",
+          "reverse": false
+        },
+        {
+          "text": "Do more than what's expected of me.",
+          "reverse": false
+        },
+        {
+          "text": "Set high standards for myself and others.",
+          "reverse": false
+        },
+        {
+          "text": "Demand quality.",
+          "reverse": false
+        },
+        {
+          "text": "Am not highly motivated to succeed.",
+          "reverse": true
+        },
+        {
+          "text": "Do just enough work to get by.",
+          "reverse": true
+        },
+        {
+          "text": "Put little time and effort into my work.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "name": "Self-Discipline",
+      "items": [
+        {
+          "text": "Get chores done right away.",
+          "reverse": false
+        },
+        {
+          "text": "Am always prepared.",
+          "reverse": false
+        },
+        {
+          "text": "Start tasks right away.",
+          "reverse": false
+        },
+        {
+          "text": "Get to work at once.",
+          "reverse": false
+        },
+        {
+          "text": "Carry out my plans.",
+          "reverse": false
+        },
+        {
+          "text": "Find it difficult to get down to work.",
+          "reverse": true
+        },
+        {
+          "text": "Waste my time.",
+          "reverse": true
+        },
+        {
+          "text": "Need a push to get started.",
+          "reverse": true
+        },
+        {
+          "text": "Have difficulty starting tasks.",
+          "reverse": true
+        },
+        {
+          "text": "Postpone decisions.",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "name": "Cautiousness",
+      "items": [
+        {
+          "text": "Avoid mistakes.",
+          "reverse": false
+        },
+        {
+          "text": "Choose my words with care.",
+          "reverse": false
+        },
+        {
+          "text": "Stick to my chosen path.",
+          "reverse": false
+        },
+        {
+          "text": "Jump into things without thinking.",
+          "reverse": true
+        },
+        {
+          "text": "Make rash decisions.",
+          "reverse": true
+        },
+        {
+          "text": "Like to act on a whim.",
+          "reverse": true
+        },
+        {
+          "text": "Rush into things.",
+          "reverse": true
+        },
+        {
+          "text": "Do crazy things.",
+          "reverse": true
+        },
+        {
+          "text": "Act without thinking.",
+          "reverse": true
+        },
+        {
+          "text": "Often make last-minute plans.",
+          "reverse": true
+        }
+      ]
+    }
+  ]
+}
