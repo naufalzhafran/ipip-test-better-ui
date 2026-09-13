@@ -1,5 +1,15 @@
 # Delivery checks
 
+## Summary-first results update
+
+- PASS: Production build and all 18 existing tests pass; scoring, sharing, and explanation content are unchanged.
+- PASS: Browser summary initially exposes five trait rows with normalized and raw scores. Expanding one trait reveals six facet rows; the show-all control exposes all 30; hide-all collapses them.
+- PASS: The Imagination shortcut opens its explanation disclosure, scrolls to it, and focuses `explanation-O1`. Back-to-summary focuses `profile-summary`.
+- PASS: A shared sample profile retained its full URL after the Openness explanation shortcut; no hash navigation replaced the encoded answers.
+- PASS: Summary and facet rows visually inspected at desktop 1280px and mobile 390px. The mobile layout has no horizontal overflow and shows exact score values even where bars are omitted.
+- PASS: Existing light/dark tokens, explicit labels, visible focus, and native buttons are reused. Expand controls expose aria-expanded and aria-controls.
+- PASS: Summary uses the same computed results as the detailed report; a consistent 0–100 scale and non-percentile explanation remain visible. New layout decisions are documented in DESIGN.md.
+
 ## URL sharing update
 
 - PASS: All 18 tests pass. Both 120- and 300-item links round-trip every answer and all computed scores, with sample flags retained and preview query parameters removed.

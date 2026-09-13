@@ -26,6 +26,7 @@ npm run dev
 ## Features
 
 - Both lengths, five domains, and 30 facets.
+- Summary-first results with five comparable trait scores, expandable facet statistics, raw totals, and shortcuts to the detailed explanations below. In-page navigation preserves shared result links.
 - Individual plain-language reading help for every statement in both versions, plus simpler explanations of all five answer choices.
 - Meaning, everyday examples at both ends of the scale, and reflection prompts for every trait and facet.
 - Share the complete profile and all individual responses through a URL, without a backend.

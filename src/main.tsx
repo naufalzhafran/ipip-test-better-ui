@@ -114,6 +114,17 @@ function App() {
   const answered = Object.keys(session?.answers ?? {}).length;
   const question = questions[session?.index ?? 0];
   const currentAnswer = session?.answers[question.id];
+  const results = session?.completed
+    ? score(session.length, session.answers)
+    : [];
+  const [expandedStats, setExpandedStats] = useState<string[]>([]);
+  function showExplanation(id: string) {
+    const target = document.getElementById(`explanation-${id}`);
+    const parent = target?.closest("details");
+    if (parent) parent.open = true;
+    target?.scrollIntoView({ block: "start" });
+    target?.focus({ preventScroll: true });
+  }
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
     try {
@@ -607,9 +618,7 @@ function App() {
                   {shared ? "Shared" : "Your"} IPIP-NEO-{session.length} profile
                 </p>
                 <h1 ref={heading} tabIndex={-1}>
-                  Many dimensions.
-                  <br />
-                  <em>One you.</em>
+                  Your personality profile
                 </h1>
                 <p>
                   {shared
@@ -640,6 +649,127 @@ function App() {
                 </button>
               </div>
             </div>
+            <section
+              className="profile-summary"
+              aria-labelledby="summary-title"
+              id="profile-summary"
+              tabIndex={-1}
+            >
+              <div className="summary-heading">
+                <div>
+                  <h2 id="summary-title">Your scores at a glance</h2>
+                  <p>
+                    Five traits, each made up of six smaller parts. Scores show
+                    position on the possible scale, not population percentiles.
+                  </p>
+                </div>
+                <button
+                  className="text-button"
+                  onClick={() =>
+                    setExpandedStats(
+                      expandedStats.length === 5
+                        ? []
+                        : results.map((d) => d.id),
+                    )
+                  }
+                >
+                  {expandedStats.length === 5
+                    ? "Hide all facet scores"
+                    : "Show all 30 facet scores"}
+                </button>
+              </div>
+              <div className="stats-column-labels" aria-hidden="true">
+                <span>Trait / facet</span>
+                <span>Scale position</span>
+                <span>Raw score</span>
+                <span />
+              </div>
+              {results.map((d) => (
+                <div className="trait-stat-group" key={d.id}>
+                  <div className="trait-stat-row">
+                    <button
+                      className="trait-stat-toggle"
+                      aria-expanded={expandedStats.includes(d.id)}
+                      aria-controls={`stats-${d.id}`}
+                      onClick={() =>
+                        setExpandedStats((ids) =>
+                          ids.includes(d.id)
+                            ? ids.filter((id) => id !== d.id)
+                            : [...ids, d.id],
+                        )
+                      }
+                    >
+                      <span aria-hidden="true">
+                        {expandedStats.includes(d.id) ? "−" : "+"}
+                      </span>
+                      {d.name}
+                    </button>
+                    <div className="stat-measure">
+                      <span className="stat-track" aria-hidden="true">
+                        <span style={{ width: `${d.position}%` }} />
+                      </span>
+                      <strong>
+                        {Math.round(d.position)}
+                        <small>/100</small>
+                      </strong>
+                    </div>
+                    <span className="stat-raw">
+                      <span className="sr-only">Raw score </span>
+                      {d.total}
+                      <small> / {d.max}</small>
+                    </span>
+                    <button
+                      className="stat-explain"
+                      aria-label={`Read about ${d.name}`}
+                      onClick={() => showExplanation(d.id)}
+                    >
+                      Explain<span aria-hidden="true"> ↓</span>
+                    </button>
+                  </div>
+                  <div
+                    id={`stats-${d.id}`}
+                    hidden={!expandedStats.includes(d.id)}
+                    className="facet-stat-list"
+                  >
+                    <p className="stat-range">
+                      Trait raw range: {d.min}–{d.max}. Each facet:{" "}
+                      {d.facets[0].min}–{d.facets[0].max}.
+                    </p>
+                    {d.facets.map((f) => (
+                      <div className="facet-stat-row" key={f.id}>
+                        <span>{f.name}</span>
+                        <div className="stat-measure">
+                          <span className="stat-track" aria-hidden="true">
+                            <span style={{ width: `${f.position}%` }} />
+                          </span>
+                          <strong>
+                            {Math.round(f.position)}
+                            <small>/100</small>
+                          </strong>
+                        </div>
+                        <span className="stat-raw">
+                          <span className="sr-only">Raw score </span>
+                          {f.total}
+                          <small> / {f.max}</small>
+                        </span>
+                        <button
+                          className="stat-explain"
+                          aria-label={`Read about ${f.name}`}
+                          onClick={() => showExplanation(f.id)}
+                        >
+                          Explain<span aria-hidden="true"> ↓</span>
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+              <p className="summary-footnote">
+                Expand a trait to see its six facet scores. “Explain” takes you
+                to the meaning and examples below. Higher scores are not better
+                scores.
+              </p>
+            </section>
             <div className="score-note">
               <strong>How to read your profile</strong>
               <p>
@@ -652,7 +782,7 @@ function App() {
               </p>
             </div>
             <div className="results-reading-help">
-              <h2>Start with the five traits</h2>
+              <h2>What your scores mean</h2>
               <p>
                 A trait is a broad pattern, like enjoying company. Each trait
                 has six smaller parts, called <strong>facets</strong>. Those
@@ -667,8 +797,13 @@ function App() {
               </p>
             </div>
             <div className="results-list">
-              {score(session.length, session.answers).map((d, i) => (
-                <section className="domain-result" key={d.id}>
+              {results.map((d, i) => (
+                <section
+                  className="domain-result"
+                  key={d.id}
+                  id={`explanation-${d.id}`}
+                  tabIndex={-1}
+                >
                   <div className="domain-title">
                     <span className="index-number">0{i + 1}</span>
                     <h2>{d.name}</h2>
@@ -699,7 +834,12 @@ function App() {
                     </summary>
                     <div className="facets">
                       {d.facets.map((f) => (
-                        <article className="facet-detail" key={f.id}>
+                        <article
+                          className="facet-detail"
+                          key={f.id}
+                          id={`explanation-${f.id}`}
+                          tabIndex={-1}
+                        >
                           <div className="facet">
                             <h3>{f.name}</h3>
                             <div className="facet-bar">
@@ -721,6 +861,16 @@ function App() {
                       ))}
                     </div>
                   </details>
+                  <button
+                    className="text-button back-to-summary"
+                    onClick={() => {
+                      const target = document.getElementById("profile-summary");
+                      target?.scrollIntoView({ block: "start" });
+                      target?.focus({ preventScroll: true });
+                    }}
+                  >
+                    Back to score summary ↑
+                  </button>
                 </section>
               ))}
             </div>
