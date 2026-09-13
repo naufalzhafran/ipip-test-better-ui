@@ -28,6 +28,7 @@ npm run dev
 - Both lengths, five domains, and 30 facets.
 - Individual plain-language reading help for every statement in both versions, plus simpler explanations of all five answer choices.
 - Meaning, everyday examples at both ends of the scale, and reflection prompts for every trait and facet.
+- Share the complete profile and all individual responses through a URL, without a backend.
 - One question at a time with 1–5 keyboard shortcuts and Enter to continue.
 - Device-local saved progress, pause/resume, review, and confirmed replacement of an existing test.
 - Light and dark themes, responsive controls, native modal focus handling.
@@ -47,6 +48,14 @@ The original CGI scripts and population norm tables are not bundled. This app do
 Reading aids and result explanations are editorial additions in `src/explanations.ts`. They do not replace the original statements or scoring keys. Their effect on how people answer has not been validated. Result examples describe possible tendencies, not personalized predictions or diagnostic conclusions.
 
 Open `/?preview=results` for a visibly labeled sample profile. This uses synthetic responses in memory and does not read or overwrite saved questionnaire answers.
+
+## Share results
+
+On a completed profile, choose **Share full results**, then **Copy link**. A recipient opens the full results directly, including all five traits, 30 facets, explanations, and a read-only list of every answer. Opening a shared link does not replace the recipient's saved test. Use the deployed site when sharing between devices; localhost links work only on the machine running the app.
+
+The versioned URL fragment contains the test length, sample/profile flag, and one digit per response. No server or database is required. URL fragments are not included in the HTTP page request, but the contents are **not encrypted or access-controlled**: anyone with the link can read the answers, and a copied link cannot be revoked. Treat it like sharing the full response sheet. Explanations are rendered by the current app version rather than frozen inside the link.
+
+`src/sharing.ts` implements the format and rejects malformed, truncated, unsupported-version, and out-of-range payloads. Keep the version-1 item order and scoring semantics stable; introduce a new format version if they change. Sample links retain their sample label.
 
 The inventory is for reflection and education, not diagnosis. No answers are sent to a server; saved answers remain in localStorage for the current browser profile. Google Fonts loads the two typefaces without sending questionnaire answers. No account, telemetry, or backend is included. Clear site storage to remove a saved test, or begin a new test to replace it.
 

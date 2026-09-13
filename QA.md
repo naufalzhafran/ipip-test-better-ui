@@ -1,5 +1,18 @@
 # Delivery checks
 
+## URL sharing update
+
+- PASS: All 18 tests pass. Both 120- and 300-item links round-trip every answer and all computed scores, with sample flags retained and preview query parameters removed.
+- PASS: Incomplete sessions cannot be shared. Invalid response values, lengths, format versions, and truncated links are rejected.
+- PASS: Browser share dialog generated a sample link; Copy link reported success; the generated URL opened the full sample profile.
+- PASS: Shared response review displayed all 120 answers and no edit buttons. Returning to the local test preserved the previously saved profile's scores; shared sessions are excluded from the persistence effect.
+- PASS: Invalid-link navigation showed a recovery message and a link to the user's own test.
+- PASS: The share dialog was visually checked at 390px with no horizontal overflow. Native dialog dismissal and existing theme tokens remain in use.
+- PASS: Sharing is explicitly labeled as exposing all answers to anyone with the link. The copy failure path offers manual selection; local preview links carry a same-device notice.
+- PASS: Shared URLs contain encoded responses in the fragment; no backend, upload endpoint, or external sharing service was added.
+
+The existing antislop design and behavior checks below apply to unchanged surfaces. The textarea uses the existing surface, border, focus, and text tokens; the new primary action names its behavior explicitly.
+
 ## Reading-help and deployment update
 
 - PASS: All 14 tests pass, including individual explanation coverage for every item in both inventories and complete guides for all five traits and 30 facets.

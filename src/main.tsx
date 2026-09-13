@@ -9,6 +9,7 @@ import {
   type Session,
 } from "./scoring";
 import "./style.css";
+import { shareUrl, readSharedResult } from "./sharing";
 import {
   explainQuestion,
   traitExplanations,
@@ -17,8 +18,12 @@ import {
 } from "./explanations";
 
 const STORAGE = "ipip-session-v1";
+const hasSharedLink = window.location.hash.startsWith("#result=");
+const shared = readSharedResult(window.location.hash);
 const preview =
+  !hasSharedLink &&
   new URLSearchParams(window.location.search).get("preview") === "results";
+const sample = preview || shared?.sample === true;
 const choices = [
   "Very inaccurate",
   "Moderately inaccurate",
@@ -58,6 +63,7 @@ function ReadingGuide({ explanation }: { explanation: Explanation }) {
   );
 }
 function initial() {
+  if (hasSharedLink) return shared?.session ?? null;
   if (preview) {
     const base: Record<string, number> = { O: 4, C: 4, E: 3, A: 4, N: 2 };
     return {
@@ -86,7 +92,7 @@ function initial() {
 function App() {
   const [session, setSession] = useState<Session | null>(initial);
   const [view, setView] = useState<"start" | "test" | "results">(
-    preview ? "results" : "start",
+    preview || shared ? "results" : "start",
   );
   const [length, setLength] = useState<Length>(session?.length ?? 120);
   const [theme, setTheme] = useState(() => {
@@ -98,7 +104,10 @@ function App() {
   });
   const [storageError, setStorageError] = useState(false);
   const [message, setMessage] = useState("");
-  const [modal, setModal] = useState<"about" | "review" | "reset" | null>(null);
+  const [modal, setModal] = useState<
+    "about" | "review" | "reset" | "share" | null
+  >(null);
+  const [copyStatus, setCopyStatus] = useState("");
   const dialog = useRef<HTMLDialogElement>(null);
   const heading = useRef<HTMLHeadingElement>(null);
   const questions = questionsFor(session?.length ?? length);
@@ -114,7 +123,7 @@ function App() {
     }
   }, [theme]);
   useEffect(() => {
-    if (!session || preview) return;
+    if (!session || preview || hasSharedLink) return;
     try {
       localStorage.setItem(STORAGE, JSON.stringify(session));
       setStorageError(false);
@@ -122,6 +131,11 @@ function App() {
       setStorageError(true);
     }
   }, [session]);
+  useEffect(() => {
+    const changed = () => window.location.reload();
+    window.addEventListener("hashchange", changed);
+    return () => window.removeEventListener("hashchange", changed);
+  }, []);
   useEffect(() => {
     if (modal) dialog.current?.showModal();
     else dialog.current?.close();
@@ -232,7 +246,7 @@ function App() {
         JSON.stringify(
           {
             instrument: `IPIP-NEO-${session.length}`,
-            sample: preview,
+            sample,
             scoring:
               "Raw keyed scores and position within the possible scale range; not population percentiles.",
             results: score(session.length, session.answers).map((d) => ({
@@ -266,7 +280,11 @@ function App() {
       <header className="header">
         <button
           className="wordmark"
-          onClick={() => setView("start")}
+          onClick={() =>
+            hasSharedLink
+              ? window.location.assign(window.location.pathname)
+              : setView("start")
+          }
           aria-label="IPIP home"
         >
           ipip<span>Personality inventory</span>
@@ -310,6 +328,25 @@ function App() {
         </div>
       )}
       <main>
+        {hasSharedLink && (
+          <div className="warning" role="status">
+            {shared ? (
+              <>
+                <strong>
+                  {sample ? "Shared sample results." : "Shared results."}
+                </strong>{" "}
+                This profile comes from the link. Your saved test has not been
+                changed.
+              </>
+            ) : (
+              <>
+                <strong>This results link is invalid or incomplete.</strong> Ask
+                the sender to copy the full link again.
+              </>
+            )}{" "}
+            <a href={window.location.pathname}>Open your own test</a>
+          </div>
+        )}
         {preview && (
           <div className="warning" role="status">
             <strong>Sample results.</strong> These use synthetic answers, not
@@ -317,7 +354,7 @@ function App() {
             <a href="/">Return to your test</a>
           </div>
         )}
-        {view === "start" && (
+        {view === "start" && !hasSharedLink && (
           <div className="start-layout">
             <section className="introduction">
               <p className="eyebrow">The Big Five · IPIP-NEO</p>
@@ -567,7 +604,7 @@ function App() {
             <div className="results-header">
               <div>
                 <p className="eyebrow">
-                  Your IPIP-NEO-{session.length} profile
+                  {shared ? "Shared" : "Your"} IPIP-NEO-{session.length} profile
                 </p>
                 <h1 ref={heading} tabIndex={-1}>
                   Many dimensions.
@@ -575,13 +612,24 @@ function App() {
                   <em>One you.</em>
                 </h1>
                 <p>
-                  A snapshot of how you described yourself today.
+                  {shared
+                    ? "A snapshot of the responses included in this link."
+                    : "A snapshot of how you described yourself today."}
                   <br />
                   Use it as a starting point for reflection.
                 </p>
               </div>
               <div className="result-actions">
-                <button className="primary" onClick={download}>
+                <button
+                  className="primary"
+                  onClick={() => {
+                    setCopyStatus("");
+                    setModal("share");
+                  }}
+                >
+                  Share full results
+                </button>
+                <button className="secondary" onClick={download}>
                   Download results (.json)
                 </button>
                 <button
@@ -682,8 +730,15 @@ function App() {
                 circumstances and how you interpret the questions. Facet names
                 follow the published inventory.
               </p>
-              <button className="secondary" onClick={() => setView("start")}>
-                Back to test options
+              <button
+                className="secondary"
+                onClick={() =>
+                  hasSharedLink
+                    ? window.location.assign(window.location.pathname)
+                    : setView("start")
+                }
+              >
+                {shared ? "Take your own test" : "Back to test options"}
               </button>
             </div>
           </div>
@@ -710,9 +765,11 @@ function App() {
           <h2>
             {modal === "about"
               ? "About this questionnaire"
-              : modal === "reset"
-                ? "Start a new test?"
-                : "Your answers"}
+              : modal === "share"
+                ? "Share full results"
+                : modal === "reset"
+                  ? "Start a new test?"
+                  : "Your answers"}
           </h2>
           <button
             className="close-button"
@@ -722,6 +779,56 @@ function App() {
             ×
           </button>
         </div>
+        {modal === "share" && session?.completed && (
+          <div className="share-dialog">
+            <p>
+              The link includes all five traits, all 30 facets, their
+              explanations, and every answer. Anyone with the link can view
+              them. There is no password or way to revoke a copied link.
+            </p>
+            <label htmlFor="share-url">Full results link</label>
+            <textarea
+              id="share-url"
+              rows={4}
+              readOnly
+              value={shareUrl(window.location.href, session, sample)}
+              onFocus={(e) => e.currentTarget.select()}
+            />
+            <button
+              className="primary"
+              onClick={async () => {
+                try {
+                  await navigator.clipboard.writeText(
+                    shareUrl(window.location.href, session, sample),
+                  );
+                  setCopyStatus("Link copied.");
+                } catch {
+                  setCopyStatus(
+                    "Automatic copying is unavailable. Select the link above and copy it manually.",
+                  );
+                }
+              }}
+            >
+              Copy link
+            </button>
+            <p className="copy-status" role="status">
+              {copyStatus}
+            </p>
+            <p className="muted">
+              The answers are encoded in the link, not encrypted. They are not
+              uploaded to a database. Explanations use the version of the app
+              the recipient opens.
+            </p>
+            {["localhost", "127.0.0.1", "::1", "[::1]"].includes(
+              window.location.hostname,
+            ) && (
+              <p className="muted">
+                This is a local preview link. To share with someone on another
+                device, open the deployed site and create the link there.
+              </p>
+            )}
+          </div>
+        )}
         {modal === "about" && (
           <div className="about-content">
             <p>
@@ -756,6 +863,13 @@ function App() {
               (maximum − minimum) × 100. No population norms are applied.
             </p>
             <h3>Your data</h3>
+            <p>
+              If you choose to share results, the link includes all of your
+              answers. Anyone with that link can read them. Shared links open
+              without replacing the recipient’s saved test. The URL fragment is
+              not sent in the web page’s HTTP request, but it is visible to
+              anyone you give the link to.
+            </p>
             <p>
               Answers and progress are stored in this browser’s local storage.
               This app sends no answers to a server. Anyone using this browser
@@ -823,7 +937,21 @@ function App() {
             </div>
           </>
         )}
-        {modal === "review" && session && (
+        {modal === "review" && shared && session && (
+          <>
+            <p>These are the responses included in this shared profile.</p>
+            <ol className="shared-answers">
+              {questions.map((q) => (
+                <li key={q.id}>
+                  <strong>{q.text}</strong>
+                  <span>{choices[session.answers[q.id] - 1]}</span>
+                  <p>{explainQuestion(q.text)}</p>
+                </li>
+              ))}
+            </ol>
+          </>
+        )}
+        {modal === "review" && !shared && session && (
           <>
             <p>
               {answered} of {session.length} answered. Choose any question to
